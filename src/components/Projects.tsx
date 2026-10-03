@@ -42,8 +42,11 @@ function CaseSection({ section }: { section: Section }) {
             <tbody>
               {section.table.rows.map((row) => (
                 <tr key={row.join("|")}>
-                  {row.map((cell) => (
-                    <td key={cell}>{cell}</td>
+                  {row.map((cell, index) => (
+                    <td key={`${section.table?.headers[index]}-${index}`}>
+                      <span className="cell-label">{section.table?.headers[index]}</span>
+                      {cell}
+                    </td>
                   ))}
                 </tr>
               ))}
