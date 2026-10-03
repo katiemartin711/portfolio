@@ -12,7 +12,7 @@ export const profile = {
   hiringNote:
     "Open to full-time opportunities in data analytics, business intelligence, reporting, and frontend/mobile development.",
   about: [
-    "I spent 10 years teaching middle school science and social studies — and the whole time, I was doing analytics. In education, we call it data-driven instruction: collecting assessment data, spotting trends, identifying which students need intervention, and building action plans around what the numbers tell us. I've always been the teacher who wanted to visualize the data, not just read a report.",
+    "I spent 10 years teaching — middle school science and social studies, plus 1st and 4th grade — and the whole time, I was doing analytics. In education, we call it data-driven instruction: collecting assessment data, spotting trends, identifying which students need intervention, and building action plans around what the numbers tell us. I've always been the teacher who wanted to visualize the data, not just read a report.",
     "Now I'm making it official. I'm moving into data analytics and software development full-time: taking messy, complex data and turning it into clear visuals, confident decisions, and tools people actually use — from dashboards to mobile apps.",
   ],
   strengths: [
@@ -26,7 +26,7 @@ export const profile = {
 export const skills: { category: string; tools: string }[] = [
   {
     category: "SQL",
-    tools: "PostgreSQL · BigQuery · SQLite — joins, CTEs, aggregations, window functions",
+    tools: "PostgreSQL · SQLite — joins, CTEs, aggregations, window functions",
   },
   { category: "Data visualization", tools: "Tableau · Power BI" },
   {
@@ -71,7 +71,8 @@ export const experience: Experience[] = [
     role: "Software Engineer Contractor",
     org: "Polygrok · Austin, TX",
     when: "Apr 2024 — Feb 2025",
-    summary: "",
+    summary:
+      "Bug intake and triage via Jira and Instabug; authored automated end-to-end test frameworks with Maestro, plus exploratory and regression testing, test-case writing, and fix verification with developers.",
   },
   {
     role: "Middle School Science Teacher",
@@ -135,6 +136,14 @@ export const projects: Project[] = [
       },
     ],
     embedHref: tableau,
+    figures: [
+      {
+        src: "images/telco-dashboard.png",
+        alt: "Telco customer churn Tableau dashboard showing total revenue, overall churn, churn by contract, churn by tenure cohort, and the tech-support risk matrix.",
+        caption:
+          "Executive dashboard: contract risk, tenure drop-off, and the fiber-optic tech-support risk matrix.",
+      },
+    ],
     sections: [
       {
         heading: "Executive summary",
@@ -235,7 +244,7 @@ export const projects: Project[] = [
   {
     id: "coffee",
     number: "02",
-    title: "Executive Dashboard: Coffee Shop Business Performance & Operational Intelligence",
+    title: "Coffee Shop Sales & Operations",
     kind: "Analytics",
     summary:
       "An interactive, executive-ready performance dashboard in Google Sheets for a multi-location coffee chain. It unifies raw transactional data across revenue, foot traffic, product categories, and store locations so leadership can see operations in one place.",
@@ -291,7 +300,7 @@ export const projects: Project[] = [
     stats: [
       { value: "180,519", label: "fulfillment records" },
       { value: "42.72%", label: "on-time delivery" },
-      { value: "0%", label: "First Class on-time" },
+      { value: "Failed", label: "First Class on-time: 0%" },
     ],
     links: [
       {
@@ -340,12 +349,15 @@ export const projects: Project[] = [
     kind: "Software",
     summary:
       "A keto and carnivore diet logging app for iOS and Android. The headline feature is plain-English meal logging: type what you ate instead of searching a food database.",
-    tags: ["React Native", "Expo", "TypeScript", "SQLite"],
-    stats: [
-      { value: "On-device", label: "SQLite, no account" },
-      { value: "iOS & Android", label: "in beta" },
-      { value: "Local", label: "reminders & export" },
+    tags: [
+      "React Native",
+      "SQLite",
+      "on-device",
+      "no account",
+      "iOS & Android",
+      "in beta",
     ],
+    stats: [],
     links: [
       {
         label: "GitHub repository",
@@ -375,7 +387,7 @@ export const projects: Project[] = [
       {
         heading: "Overview",
         paragraphs: [
-          "Most food-logging apps make you search a database for every ingredient. KetoKind flips that: you just type what you ate in plain English. It is built for people eating keto or carnivore who want fast logging without barcode scans and database lookups.",
+          "Most food-logging apps make you search a database for every ingredient. KetoKind flips that: you just type what you ate in plain English. It is built for people eating keto or carnivore who want fast logging without barcode scans and database lookups. It also tracks the relationship between food, medications, and supplements and symptoms over time — the thing she wished existed when she started.",
         ],
       },
       {
@@ -394,6 +406,7 @@ export const projects: Project[] = [
         heading: "Key features",
         bullets: [
           "Plain-English meal logging — type what you ate; no food-database search required.",
+          "Symptom, supplement, and medication tracking — see how food, medications, and supplements relate to symptoms over time.",
           "Smart reminders — a daily nudge (default 8pm) only fires when nothing has been logged that day. Users can change the time, add extra daily reminders, and toggle sound and badge.",
           "Trends screen — drill down into eating patterns over time.",
           "Log and Profile screens — view, edit, and delete logged meals.",

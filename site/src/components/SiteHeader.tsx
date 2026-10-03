@@ -14,6 +14,26 @@ export function SiteHeader() {
   const [active, setActive] = useState("about");
 
   useEffect(() => {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    const apply = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      const next = `${height}px`;
+      if (document.documentElement.style.getPropertyValue("--header") !== next) {
+        document.documentElement.style.setProperty("--header", next);
+      }
+    };
+    apply();
+    const observer = new ResizeObserver(apply);
+    observer.observe(header);
+    window.addEventListener("resize", apply);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", apply);
+    };
+  }, [open]);
+
+  useEffect(() => {
     const update = () => {
       const marker = window.scrollY + 110;
       let current = links[0].id;
