@@ -387,7 +387,7 @@ export const projects: Project[] = [
       {
         heading: "Overview",
         paragraphs: [
-          "Most food-logging apps make you search a database for every ingredient. KetoKind flips that: you just type what you ate in plain English. It is built for people eating keto or carnivore who want fast logging without barcode scans and database lookups. It also tracks the relationship between food, medications, and supplements and symptoms over time — the thing she wished existed when she started.",
+          "Most food-logging apps make you search a database for every ingredient. KetoKind flips that: you just type what you ate in plain English. It is built for people eating keto or carnivore who want fast logging without barcode scans and database lookups. It also tracks the relationship between food, medications, and supplements and symptoms over time — the thing I wish existed when I started.",
         ],
       },
       {
