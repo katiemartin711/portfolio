@@ -71,14 +71,16 @@ function ProjectCard({ project }: { project: Project }) {
           <li key={tag}>{tag}</li>
         ))}
       </ul>
-      <dl className="stats">
-        {project.stats.map((stat) => (
-          <div key={stat.label}>
-            <dt>{stat.label}</dt>
-            <dd>{stat.value}</dd>
-          </div>
-        ))}
-      </dl>
+      {project.stats.length ? (
+        <dl className="stats">
+          {project.stats.map((stat) => (
+            <div key={stat.label}>
+              <dt>{stat.label}</dt>
+              <dd>{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
       <div className="card-links">
         {project.links.map((link) => (
           <ExternalAnchor key={link.href} link={link} />
