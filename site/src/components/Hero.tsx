@@ -19,9 +19,19 @@ export function Hero() {
           <a className="button" href={profile.resume} target="_blank" rel="noopener noreferrer">
             Résumé
           </a>
-          <a className="button quiet" href={`mailto:${profile.email}`}>
-            Email
-          </a>
+          <div className="action-group">
+            <a className="button quiet" href={`mailto:${profile.email}`}>
+              Email
+            </a>
+            <a
+              className="button quiet"
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
       <figure className="portrait">
