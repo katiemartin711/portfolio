@@ -222,6 +222,12 @@ a:hover {
   margin-top: 1.4rem;
 }
 
+.action-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
